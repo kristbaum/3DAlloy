@@ -1,0 +1,24 @@
+services:
+  mediawiki:
+    image: mediawiki
+    ports:
+      - "8080:80"
+    volumes:
+      - ./data/LocalSettings.php:/var/www/html/LocalSettings.php
+      - ./data/3DAlloy:/var/www/html/extensions/3DAlloy
+      - ./data:/var/www/data
+    restart: unless-stopped
+    environment:
+      # - MW_INSTALL_PATH=/var/www/html
+      # - MW_DB_TYPE=sqlite
+      # - MW_DB_NAME=my_wiki
+      # - MW_DB_PATH=/var/www/data
+      # - MW_SITE_SERVER=//localhost:8080
+      # - MW_SITE_NAME=MyWiki
+      # - MW_ADMIN_USER=Admin
+      # - MW_ADMIN_PASS=adminadmin
+       - MW_SCRIPT_PATH=/
+    # Ensuring the data directory for SQLite is preserved
+
+volumes:
+  data: {}
