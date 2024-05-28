@@ -5,8 +5,9 @@ services:
       - "8080:80"
     volumes:
       - ./data/LocalSettings.php:/var/www/html/LocalSettings.php
+      - ./data/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
       - ./data/3DAlloy:/var/www/html/extensions/3DAlloy
-      - ./data:/var/www/data
+      - sqlite_data:/var/www/data
     restart: unless-stopped
     environment:
       # - MW_INSTALL_PATH=/var/www/html
@@ -17,8 +18,10 @@ services:
       # - MW_SITE_NAME=MyWiki
       # - MW_ADMIN_USER=Admin
       # - MW_ADMIN_PASS=adminadmin
-       - MW_SCRIPT_PATH=/
+
+      - MW_SCRIPT_PATH=/
     # Ensuring the data directory for SQLite is preserved
 
 volumes:
-  data: {}
+  sqlite_data:
+    driver: local

@@ -19,7 +19,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 ## Uncomment this to disable output compression
 # $wgDisableOutputCompression = true;
 
-$wgSitename = "3DTestwiki";
+$wgSitename = "test";
+$wgMetaNamespace = "Test";
 
 ## The URL base path to the directory containing the wiki;
 ## defaults for all runtime URL paths are based off of this.
@@ -118,12 +119,12 @@ $wgUseImageMagick = true;
 $wgImageMagickConvertCommand = "/usr/bin/convert";
 
 # InstantCommons allows wiki to use images from https://commons.wikimedia.org
-$wgUseInstantCommons = true;
+$wgUseInstantCommons = false;
 
 # Periodically send a pingback to https://www.mediawiki.org/ with basic data
 # about this MediaWiki instance. The Wikimedia Foundation shares this data
 # with MediaWiki developers to help guide future development efforts.
-$wgPingback = true;
+$wgPingback = false;
 
 # Site language code, should be one of the list in ./includes/languages/data/Names.php
 $wgLanguageCode = "de";
@@ -136,22 +137,22 @@ $wgLocaltimezone = "UTC";
 ## be publicly accessible from the web.
 #$wgCacheDirectory = "$IP/cache";
 
-$wgSecretKey = "c7acc02e438d6f427cc8f5a78faad8cb6ad91651f1e03318dc2e37f020f1827e";
+$wgSecretKey = "7d1efc42badafb56a15899e484d3e5b7a11146571bde984ddf17e52ba11f7938";
 
 # Changing this will log out all existing sessions.
 $wgAuthenticationTokenVersion = "1";
 
 # Site upgrade key. Must be set to a string (default provided) to turn on the
 # web installer while LocalSettings.php is in place
-$wgUpgradeKey = "1b361f79a3ff0852";
+$wgUpgradeKey = "b33f7e6a53f5952c";
 
 ## For attaching licensing metadata to pages, and displaying an
 ## appropriate copyright notice / icon. GNU Free Documentation
 ## License and Creative Commons licenses are supported so far.
 $wgRightsPage = ""; # Set to the title of a wiki page that describes your license/copyright
-$wgRightsUrl = "https://creativecommons.org/publicdomain/zero/1.0/";
-$wgRightsText = "Creative Commons „Zero“ (Gemeinfreiheit)";
-$wgRightsIcon = "$wgResourceBasePath/resources/assets/licenses/cc-0.png";
+$wgRightsUrl = "";
+$wgRightsText = "";
+$wgRightsIcon = "";
 
 # Path to the GNU diff3 utility. Used for conflict resolution.
 $wgDiff3 = "/usr/bin/diff3";
@@ -172,18 +173,16 @@ wfLoadSkin( 'Vector' );
 # wfLoadExtension( 'ExtensionName' );
 # to LocalSettings.php. Check specific extension documentation for more details.
 # The following extensions were automatically enabled:
+wfLoadExtension( '3DAlloy' );
+wfLoadExtension( 'CodeEditor' );
 wfLoadExtension( 'Linter' );
 wfLoadExtension( 'MultimediaViewer' );
-wfLoadExtension( 'ParserFunctions' );
-wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 wfLoadExtension( 'VisualEditor' );
 wfLoadExtension( 'WikiEditor' );
 
 
 # End of automatically generated settings.
 # Add more configuration options below.
-
-wfLoadExtension( '3DAlloy' );
 
 $wgFileExtensions = array_merge(
 	$wgFileExtensions, array(
@@ -193,5 +192,5 @@ $wgFileExtensions = array_merge(
 		'stl', 'stlb'
 	)
   );
-$wg3DAlloy["width"]  = 500;
-$wg3DAlloy["height"] = 400;
+
+$wgMaxUploadSize = 1024 * 1024 * 1024; // 1 GB
