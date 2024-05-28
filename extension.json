@@ -19,6 +19,7 @@
         "CanvasRenderer.js",
         "OBJLoader.js",
         "STLLoader.js",
+        "GLTFLoader.js",
         "OrbitControls.js",
         "3DAlloy.js"
       ],

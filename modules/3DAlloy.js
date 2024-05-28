@@ -146,6 +146,10 @@ Object3D.prototype.load_file = function() {
   } else if (this.params.file.match(/\.(stl|stlb)$/ig) !== null) {
 
     loader = new THREE.STLLoader();
+  
+  } else if (this.params.file.match(/\.(glb|gltf)$/ig) !== null) {
+
+    loader = new THREE.GLTFLoader();
 
   } else if (this.params.file.match(/\.(buffjson|buff)$/ig) !== null) {
 

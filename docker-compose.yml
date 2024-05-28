@@ -6,7 +6,7 @@ services:
     volumes:
       - ./data/LocalSettings.php:/var/www/html/LocalSettings.php
       - ./data/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
-      - ./data/3DAlloy:/var/www/html/extensions/3DAlloy
+      - .:/var/www/html/extensions/3DAlloy
       - sqlite_data:/var/www/data
     restart: unless-stopped
     environment:
