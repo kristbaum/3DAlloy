@@ -139,7 +139,7 @@ Object3D.prototype.load_file = function() {
   var loader = undefined;
 
   if (this.params.file.match(/\.obj$/ig) !== null) {
-
+    console.log('OBJ file detected, runnning OBJLoader');
     loader = new THREE.OBJLoader();
     load_func = this.load_obj.bind(this);
 
@@ -148,7 +148,7 @@ Object3D.prototype.load_file = function() {
     loader = new THREE.STLLoader();
   
   } else if (this.params.file.match(/\.(glb|gltf)$/ig) !== null) {
-
+    console.log('GLTF file detected, runnning GLTFLoader');
     loader = new THREE.GLTFLoader();
 
   } else if (this.params.file.match(/\.(buffjson|buff)$/ig) !== null) {

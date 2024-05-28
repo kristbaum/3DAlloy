@@ -1,6 +1,9 @@
 # Install
 ```
-sudo ./run_test_container.sh
-sudo docker exec -it test-mediawiki bash
+sudo docker-compose up
 ```
 
+Sample objects:
+```
+https://github.com/KhronosGroup/glTF-Sample-Models
+```
