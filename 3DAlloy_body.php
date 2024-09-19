@@ -98,7 +98,7 @@ class ThreeDimentionAlloy extends ImageHandler {
 
     if (isset($par['color']) && (strpos($par['color'], '0x') === false)) {
       if (is_numeric($par['color'])) {
-        $par['color'] = '0x'.dechex($par['color']);
+        $par['color'] = '0x'.dechex(intval($par['color']));
       } else {
         $par['color'] = '0x'.$par['color'];
       }
@@ -147,7 +147,7 @@ class ThreeDimentionAlloy extends ImageHandler {
 
     if (isset($par['color']) && (strpos($par['color'], '0x') === false)) {
       if (is_numeric($par['color'])) {
-        $par['color'] = '0x'.dechex($par['color']);
+        $par['color'] = '0x'.dechex(intval($par['color']));
       } else {
         $par['color'] = '0x'.$par['color'];
       }
@@ -175,7 +175,7 @@ class ThreeDimentionAlloy extends ImageHandler {
 
         if (isset($par['color']) &&(strpos($par['color'], '0x') === false)) {
           if (is_numeric($par['color'])) {
-            $par['color'] = '0x'.dechex($par['color']);
+            $par['color'] = '0x'.dechex(intval($par['color']));
           } else {
             $par['color'] = '0x'.$par['color'];
           }
@@ -203,7 +203,7 @@ class ThreeDimentionAlloy extends ImageHandler {
 
           if (isset($par['color']) &&(strpos($par['color'], '0x') === false)) {
             if (is_numeric($par['color'])) {
-              $par['color'] = '0x'.dechex($par['color']);
+              $par['color'] = '0x'.dechex(intval($par['color']));
             } else {
               $par['color'] = '0x'.$par['color'];
             }
