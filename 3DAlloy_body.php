@@ -36,6 +36,7 @@ class ThreeDimentionAlloy extends ImageHandler {
     $mime->addExtraTypes('application/sla stl stlb');
     $mime->addExtraTypes('text/plain stl');
     $mime->addExtraTypes('application/octet-stream stl stlb');
+    $mime->addExtraTypes('application/glb glb');
 
     $mime->addExtraInfo('application/json [DRAWING]');
     $mime->addExtraInfo('application/obj [DRAWING]');

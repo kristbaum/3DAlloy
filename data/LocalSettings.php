@@ -188,7 +188,7 @@ $wgFileExtensions = array_merge(
 	$wgFileExtensions, array(
 		'json', '3dj', '3djson', 'three',
 		'buff', 'buffjson',
-		'obj',
+		'obj', 'glb',
 		'stl', 'stlb'
 	)
   );

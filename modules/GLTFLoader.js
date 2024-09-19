@@ -30,7 +30,7 @@ THREE.GLTFLoader.prototype = {
 	}
 };
 
-var containerId = 'model-container';
+/* var containerId = 'model-container';
 var modelUrl = 'path/to/model.gltf';
 
 var scene = new THREE.Scene();
@@ -51,4 +51,4 @@ function render() {
 	renderer.render(scene, camera);
 }
 
-camera.position.z = 5;
+camera.position.z = 5; */
