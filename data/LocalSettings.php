@@ -194,3 +194,5 @@ $wgFileExtensions = array_merge(
   );
 
 $wgMaxUploadSize = 1024 * 1024 * 1024; // 1 GB
+
+$wgShowExceptionDetails = true;

@@ -1,3 +1,5 @@
+export {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
+
 Object3D = function () {
   this.camera   = {};
   this.scene    = {};
@@ -149,8 +151,7 @@ Object3D.prototype.load_file = function() {
   
   } else if (this.params.file.match(/\.(glb|gltf)$/ig) !== null) {
     console.log('GLTF file detected, runnning GLTFLoader');
-    loader = new THREE.GLTFLoader();
-
+    loader = new GLTFLoader();
   } else if (this.params.file.match(/\.(buffjson|buff)$/ig) !== null) {
 
     loader = new THREE.BufferGeometryLoader();
